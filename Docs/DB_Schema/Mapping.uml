@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>4a55e3a0-bfb9-469c-8261-49534a0cbcd3.SCHEMA:library</OriginalElement>
+  <nodes>
+    <node x="1126.314393939394" y="182.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.publisher</node>
+    <node x="753.9393939393939" y="623.5">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders_book</node>
+    <node x="163.49999999999994" y="612.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.payment</node>
+    <node x="1141.814393939394" y="386.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.bills</node>
+    <node x="644.5681818181818" y="0.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.user</node>
+    <node x="416.49999999999994" y="612.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.borrow</node>
+    <node x="303.8143939393939" y="364.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders</node>
+    <node x="0.0" y="386.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.address</node>
+    <node x="755.9393939393939" y="320.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.book</node>
+    <node x="267.84090909090907" y="193.5">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.client</node>
+    <node x="752.3143939393939" y="182.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.category</node>
+    <node x="975.340909090909" y="601.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.supply</node>
+    <node x="602.3143939393939" y="182.5">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.user_phone</node>
+    <node x="450.3143939393939" y="182.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.author</node>
+    <node x="9.5" y="601.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.shipping</node>
+    <node x="904.3143939393939" y="171.0">4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.shipping_officer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.shipping" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.address" relationship="REFERENCES">
+      <point x="-5.0" y="-60.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.book" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.publisher" relationship="REFERENCES">
+      <point x="-3.939393939162983E-4" y="-115.5" />
+      <point x="817.939" y="295.0" />
+      <point x="1192.314" y="295.0" />
+      <point x="-3.939393939162983E-4" y="38.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders_book" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.book" relationship="REFERENCES">
+      <point x="58.999606060606084" y="0.0" />
+      <point x="928.0" y="661.5" />
+      <point x="928.0" y="435.5" />
+      <point x="61.999606060606084" y="0.0" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.supply" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.book" relationship="REFERENCES">
+      <point x="-92.999909090909" y="0.0" />
+      <point x="928.0" y="661.5" />
+      <point x="928.0" y="435.5" />
+      <point x="61.999606060606084" y="0.0" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.supply" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.bills" relationship="REFERENCES">
+      <point x="85.5" y="-60.5" />
+      <point x="-38.473484848484986" y="49.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders_book" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders" relationship="REFERENCES">
+      <point x="-59.0" y="0.0" />
+      <point x="669.8143939393939" y="661.5" />
+      <point x="669.8143939393939" y="450.5" />
+      <point x="90.5" y="15.0" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.book" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.author" relationship="REFERENCES">
+      <point x="-62.0" y="0.0" />
+      <point x="516.3143939393939" y="435.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.shipping" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders" relationship="REFERENCES">
+      <point x="10.0" y="-60.5" />
+      <point x="86.5" y="502.5" />
+      <point x="-90.5" y="67.0" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.user_phone" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.user" relationship="REFERENCES">
+      <point x="-3.939393939162983E-4" y="-38.0" />
+      <point x="667.314" y="146.0" />
+      <point x="718.068" y="146.0" />
+      <point x="-1.8181818177254172E-4" y="60.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.shipping_officer" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.user" relationship="REFERENCES">
+      <point x="-3.939393939162983E-4" y="-49.5" />
+      <point x="1005.314" y="146.0" />
+      <point x="718.068" y="146.0" />
+      <point x="-1.8181818177254172E-4" y="60.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.address" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.client" relationship="REFERENCES">
+      <point x="71.5" y="0.0" />
+      <point x="206.0" y="435.5" />
+      <point x="206.0" y="220.5" />
+      <point x="-35.99990909090906" y="0.0" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.bills" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.publisher" relationship="REFERENCES">
+      <point x="-3.939393939162983E-4" y="-49.5" />
+      <point x="-3.939393939162983E-4" y="38.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.payment" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders" relationship="REFERENCES">
+      <point x="5.6843418860808015E-14" y="-49.5" />
+      <point x="280.0" y="592.0" />
+      <point x="394.314" y="592.0" />
+      <point x="-3.9393939385945487E-4" y="71.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.borrow" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders" relationship="REFERENCES">
+      <point x="5.6843418860808015E-14" y="-49.5" />
+      <point x="493.0" y="592.0" />
+      <point x="394.314" y="592.0" />
+      <point x="-3.9393939385945487E-4" y="71.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.orders" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.client" relationship="REFERENCES">
+      <point x="-90.50039393939386" y="0.0" />
+      <point x="206.0" y="435.5" />
+      <point x="206.0" y="220.5" />
+      <point x="-35.99990909090906" y="0.0" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.book" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.category" relationship="REFERENCES">
+      <point x="-15.000393939393916" y="-115.5" />
+      <point x="-15.375393939393916" y="38.5" />
+    </edge>
+    <edge source="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.client" target="4a55e3a0-bfb9-469c-8261-49534a0cbcd3.TABLE:library.user" relationship="REFERENCES">
+      <point x="9.090909094311428E-5" y="-27.0" />
+      <point x="303.841" y="146.0" />
+      <point x="718.068" y="146.0" />
+      <point x="-1.8181818177254172E-4" y="60.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.761455525606469" showDependencies="false" x="629.5" y="361.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
