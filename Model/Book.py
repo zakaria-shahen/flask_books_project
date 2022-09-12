@@ -1,4 +1,7 @@
 from Model.DB import db
+from Model.User import User
+
+
 author_book = db.Table(
     "author_book",
     db.Column("author", db.Integer, db.ForeignKey("author.id"), primary_key=True),
@@ -11,7 +14,7 @@ class Book(db.Model):
     edition = db.Column(db.String)
     postedDate = db.Column(db.DateTime)
     # M:M
-    author = db.relationship("Author", secondary=author_book, backref="book")
+    author = db.relationship("Author", secondary="author_book", back_populates="books")
     # 1:M
     posted_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
