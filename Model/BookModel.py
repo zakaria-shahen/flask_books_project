@@ -1,6 +1,5 @@
-from Model.DB import db
-from Model.User import User
-
+from config import db
+# from sqlalchemy.orm import relationship, backref
 
 author_book = db.Table(
     "author_book",
@@ -8,14 +7,17 @@ author_book = db.Table(
     db.Column("book", db.Integer, db.ForeignKey("book.id"), primary_key=True)
 )
 
-class Book(db.Model):
+class BookModel(db.Model):
+    __tablename__ = "book"
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
     edition = db.Column(db.String)
     postedDate = db.Column(db.DateTime)
-    # M:M
-    author = db.relationship("Author", secondary="author_book", back_populates="books")
+    posted_by_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    
     # 1:M
-    posted_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    posted_by = db.relationship("UserModel", backref="posted_books")
+    # M:M
+    author = db.relationship("AuthorModel", secondary="author_book", backref="books")
 
 

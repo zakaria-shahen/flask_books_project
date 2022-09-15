@@ -1,14 +1,15 @@
-from .Main import json as Base
-import Model
+from config import json as Base
+from Model import UserModel
 
-class UserJson(Base.Schema):
+
+class UserJson(Base.SQLAlchemySchema):
     class Meta:
-        fields = ("id", "username")
-    _link = Base.Hyperlinks({
-        "self": Base.URLFor("users", value=dict(id="<id>")),
-        "collection": Base.URLFor("users")
-    })
-
+        model = UserModel
+    id = Base.auto_field()
+    username = Base.auto_field()
+    # TODO: add  links with ID
+    # posted_books = Base.HyperlinkRelated("book", url_key="posted_books", external=True)
+    # posted_books = Base.URLFor("book", values=dict(id="<id>"))
 
 user_json = UserJson()
 users_json = UserJson(many=True)

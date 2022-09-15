@@ -1,4 +1,3 @@
-from .Author import *
-from .User import * 
-from .Book import * 
-from  .DB import db
+from .AuthorModel import *
+from .UserModel import * 
+from .BookModel import * 
